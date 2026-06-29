@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechLearn — إنشاء حساب</title>
+  <link rel="stylesheet" href="style-home.css" />
+</head>
+<body class="auth-page">
+
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+
+  <div class="auth-wrapper">
+
+    <!-- Left: decorative panel -->
+    <div class="auth-panel fade-in-left">
+      <div class="panel-logo">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">TechLearn</span>
+      </div>
+      <h2 class="panel-title">انضم لآلاف الطلاب! 🚀</h2>
+      <p class="panel-sub">إنشاء حسابك مجاني 100% وبياخد دقيقة واحدة بس</p>
+      <ul class="panel-features">
+        <li>🎯 وصول فوري لـ +200 درس</li>
+        <li>🎨 مشاريع عملية من يوم 1</li>
+        <li>🏆 شهادة معتمدة عند الإتمام</li>
+        <li>💬 مجتمع طلاب داعم</li>
+      </ul>
+      <div class="panel-quote">"الاستثمار في المعرفة يعطي أفضل العوائد"</div>
+    </div>
+
+    <!-- Right: signup form -->
+    <div class="auth-form-side fade-in-right">
+      <div class="auth-form-box">
+
+        <h2 class="form-heading">إنشاء حساب جديد</h2>
+        <p class="form-sub">ابدأ رحلتك مجاناً اليوم</p>
+
+        <div class="form-group">
+          <label for="fullname" class="form-label">الاسم الكامل</label>
+          <div class="input-wrapper">
+            <span class="input-icon">👤</span>
+            <input type="text" id="fullname" class="form-input" placeholder="أحمد محمد" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="su-email" class="form-label">البريد الإلكتروني</label>
+          <div class="input-wrapper">
+            <span class="input-icon">📧</span>
+            <input type="email" id="su-email" class="form-input" placeholder="example@mail.com" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="su-pass" class="form-label">كلمة المرور</label>
+          <div class="input-wrapper">
+            <span class="input-icon">🔒</span>
+            <input type="password" id="su-pass" class="form-input" placeholder="8 أحرف على الأقل" oninput="checkStrength(this.value)" />
+            <button class="toggle-pass" onclick="togglePass('su-pass', this)" type="button">👁️</button>
+          </div>
+          <!-- Password strength bar -->
+          <div class="strength-bar">
+            <div class="strength-fill" id="strength-fill"></div>
+          </div>
+          <p class="strength-label" id="strength-label"></p>
+        </div>
+
+        <div class="form-group">
+          <label for="su-confirm" class="form-label">تأكيد كلمة المرور</label>
+          <div class="input-wrapper">
+            <span class="input-icon">🔒</span>
+            <input type="password" id="su-confirm" class="form-input" placeholder="أعد كتابة كلمة المرور" />
+            <button class="toggle-pass" onclick="togglePass('su-confirm', this)" type="button">👁️</button>
+          </div>
+        </div>
+
+        <div class="form-check">
+          <input type="checkbox" id="terms" class="check-input" />
+          <label for="terms" class="check-label">
+            أوافق على <a href="#" class="switch-link">الشروط والأحكام</a>
+          </label>
+        </div>
+
+        <button class="btn-submit" id="signup-btn" onclick="handleSignup()">
+          <span class="btn-text">إنشاء الحساب مجاناً ✨</span>
+        </button>
+
+        <p id="signup-error"   class="form-error hidden"></p>
+        <p id="signup-success" class="form-success hidden">🎉 تم إنشاء حسابك! جاري التحويل...</p>
+
+        <div class="divider"><span>أو</span></div>
+
+        <button class="btn-social btn-google">
+          <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" class="social-icon" />
+          التسجيل بـ Google
+        </button>
+
+        <p class="switch-auth">
+          عندك حساب بالفعل؟
+          <a href="login.html" class="switch-link">سجّل دخولك</a>
+        </p>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function togglePass(id, btn) {
+      const inp = document.getElementById(id);
+      if (inp.type === 'password') { inp.type = 'text'; btn.textContent = '🙈'; }
+      else                         { inp.type = 'password'; btn.textContent = '👁️'; }
+    }
+
+    function checkStrength(val) {
+      const fill  = document.getElementById('strength-fill');
+      const label = document.getElementById('strength-label');
+      let score = 0;
+      if (val.length >= 8)            score++;
+      if (/[A-Z]/.test(val))          score++;
+      if (/[0-9]/.test(val))          score++;
+      if (/[^A-Za-z0-9]/.test(val))   score++;
+
+      const levels = [
+        { w: '0%',   color: 'transparent', text: '' },
+        { w: '25%',  color: '#ef4444',     text: '⚠️ ضعيفة' },
+        { w: '50%',  color: '#f59e0b',     text: '🔶 متوسطة' },
+        { w: '75%',  color: '#3b82f6',     text: '🔷 جيدة' },
+        { w: '100%', color: '#10b981',     text: '✅ قوية جداً' },
+      ];
+
+      fill.style.width           = levels[score].w;
+      fill.style.backgroundColor = levels[score].color;
+      label.textContent          = levels[score].text;
+      label.style.color          = levels[score].color;
+    }
+
+    function handleSignup() {
+      const name    = document.getElementById('fullname').value.trim();
+      const email   = document.getElementById('su-email').value.trim();
+      const pass    = document.getElementById('su-pass').value.trim();
+      const confirm = document.getElementById('su-confirm').value.trim();
+      const terms   = document.getElementById('terms').checked;
+      const err     = document.getElementById('signup-error');
+      const suc     = document.getElementById('signup-success');
+      const btn     = document.getElementById('signup-btn');
+
+      err.classList.add('hidden');
+      suc.classList.add('hidden');
+
+      if (!name || !email || !pass || !confirm) {
+        err.textContent = '❌ من فضلك ملّي كل الحقول!';
+        err.classList.remove('hidden');
+        return;
+      }
+      if (pass !== confirm) {
+        err.textContent = '❌ كلمتا المرور مش متطابقتين!';
+        err.classList.remove('hidden');
+        return;
+      }
+      if (pass.length < 8) {
+        err.textContent = '❌ كلمة المرور لازم تكون 8 أحرف على الأقل!';
+        err.classList.remove('hidden');
+        return;
+      }
+      if (!terms) {
+        err.textContent = '❌ لازم توافق على الشروط والأحكام!';
+        err.classList.remove('hidden');
+        return;
+      }
+
+      btn.disabled = true;
+      btn.querySelector('.btn-text').textContent = 'جاري الإنشاء...';
+
+      setTimeout(() => {
+        suc.classList.remove('hidden');
+        btn.querySelector('.btn-text').textContent = '✅ تم!';
+        setTimeout(() => { window.location.href = '/index.html'; }, 1500);
+      }, 1200);
+    }
+  </script>
+
+</body>
+</html>
