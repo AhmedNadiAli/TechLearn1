@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechLearn — تعلم التقنية بأسلوبك</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Floating CSS shapes -->
+  <div class="shape shape-1"></div>
+  <div class="shape shape-2"></div>
+  <div class="shape shape-3"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <header id="navbar">
+    <nav class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">TechLearn</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#hero"     class="nav-link">الرئيسية</a></li>
+        <li><a href="#courses"  class="nav-link">الكورسات</a></li>
+        <li><a href="#features" class="nav-link">المميزات</a></li>
+        <li><a href="#contact"  class="nav-link">تواصل</a></li>
+      </ul>
+      <div class="nav-auth">
+        <a href="TechLearn/Log-in/index.html"  class="btn-nav-login">تسجيل الدخول</a>
+        <a href="TechLearn/Log-in/signup.html" class="btn-nav">ابدأ مجاناً ✨</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section id="hero">
+    <div class="hero-content animate-hero">
+      <span class="hero-badge">🚀 الأفضل في مجال التعليم التقني</span>
+      <h1 class="hero-title">
+        تعلّم التقنية<br />
+        <span class="hero-highlight">وابنِ مستقبلك</span>
+      </h1>
+      <p class="hero-desc">
+        منصة تعليمية متكاملة لتعلم البرمجة والتصميم وعلوم البيانات من الصفر حتى الاحتراف.
+        محتوى عربي، شروحات واضحة، ومشاريع حقيقية.
+      </p>
+      <div class="hero-actions">
+        <a href="#courses" class="btn-primary">اكتشف الكورسات</a>
+        <a href="#features" class="btn-ghost">تعرف علينا أكثر</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">+5000</span>
+          <span class="stat-label">طالب نشيط</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">+200</span>
+          <span class="stat-label">درس مجاني</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">98%</span>
+          <span class="stat-label">نسبة رضا</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-image-wrapper animate-hero-img">
+      <div class="hero-img-card">
+        <img src="Student.png" alt="طالب يتعلم البرمجة" class="hero-img" />
+        <div class="floating-badge" id="badge-students">👨‍💻 <strong>+5000</strong> طالب</div>
+        <div class="floating-badge" id="badge-rating">⭐ تقييم <strong>4.9</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COURSES SECTION ===== -->
+  <section id="courses">
+    <div class="section-header">
+      <span class="section-eyebrow">ما هنقدمه ليك</span>
+      <h2 class="section-title">الكورسات المتاحة</h2>
+      <p class="section-sub">ابدأ من أي مستوى — كل كورس مصمم عشان توصل للاحتراف خطوة خطوة</p>
+    </div>
+
+    <div class="cards-row">
+
+      <!-- Card 1: Web Development -->
+      <div class="card reveal">
+        <div class="card-badge badge-hot">الأكثر طلباً 🔥</div>
+        <div class="card-img-wrapper">
+          <img src="WEB_DEVELOPMENT.jpg" alt="Web Development" class="card-img" />
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">تطوير الويب</h3>
+          <p class="card-desc">تعلم HTML وCSS وJavaScript وابنِ مواقع احترافية من الصفر.</p>
+          <ul class="card-list">
+            <li>✅ 48 درس</li>
+            <li>✅ 5 مشاريع عملية</li>
+            <li>✅ شهادة معتمدة</li>
+          </ul>
+          <a href="#" class="btn-card btn-card-featured">ابدأ الكورس</a>
+        </div>
+      </div>
+
+      <!-- Card 2: Data Science -->
+      <div class="card reveal">
+        <div class="card-badge">مميز ✨</div>
+        <div class="card-img-wrapper">
+          <img src="Data_Science.jpg" alt="Data Science" class="card-img" />
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">علم البيانات</h3>
+          <p class="card-desc">استكشف عالم البيانات والتعلم الآلي وبناء النماذج التنبؤية.</p>
+          <ul class="card-list">
+            <li>✅ 40 درس</li>
+            <li>✅ 4 مشاريع تحليلية</li>
+            <li>✅ شهادة معتمدة</li>
+          </ul>
+          <a href="#" class="btn-card">ابدأ الكورس</a>
+        </div>
+      </div>
+
+      <!-- Card 3: UI/UX Design -->
+      <div class="card reveal">
+        <div class="card-badge badge-new">جديد 🎨</div>
+        <div class="card-img-wrapper">
+          <img src="Design.jpg" alt="UI/UX Design" class="card-img" />
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">تصميم UI/UX</h3>
+          <p class="card-desc">صمّم تجارب مستخدم رائعة باستخدام Figma ومبادئ التصميم الحديث.</p>
+          <ul class="card-list">
+            <li>✅ 36 درس</li>
+            <li>✅ 3 مشاريع تصميم</li>
+            <li>✅ شهادة معتمدة</li>
+          </ul>
+          <a href="#" class="btn-card">ابدأ الكورس</a>
+        </div>
+      </div>
+
+      <!-- Card 4: Cyber Security -->
+      <div class="card reveal">
+        <div class="card-badge badge-hot">رائج 🔐</div>
+        <div class="card-img-wrapper">
+          <img src="Cyber_Security.png" alt="Cyber Security" class="card-img" />
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">الأمن السيبراني</h3>
+          <p class="card-desc">تعلم حماية الأنظمة واكتشاف الثغرات والتصدي للهجمات الإلكترونية.</p>
+          <ul class="card-list">
+            <li>✅ 44 درس</li>
+            <li>✅ بيئة تدريب حقيقية</li>
+            <li>✅ شهادة معتمدة</li>
+          </ul>
+          <a href="#" class="btn-card">ابدأ الكورس</a>
+        </div>
+      </div>
+
+      <!-- Card 5: Data Analyst -->
+      <div class="card reveal">
+        <div class="card-badge">مجاني 📊</div>
+        <div class="card-img-wrapper">
+          <img src="Data_Analyst.jpg" alt="Data Analyst" class="card-img" />
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">تحليل البيانات</h3>
+          <p class="card-desc">تعلم Excel وSQL وPython لتحليل البيانات واستخراج القرارات.</p>
+          <ul class="card-list">
+            <li>✅ 32 درس</li>
+            <li>✅ مشاريع تحليلية</li>
+            <li>✅ شهادة إتمام</li>
+          </ul>
+          <a href="#" class="btn-card">ابدأ الكورس</a>
+        </div>
+      </div>
+
+      <!-- Card 6: App Development -->
+      <div class="card reveal">
+        <div class="card-badge badge-new">جديد 📱</div>
+        <div class="card-img-wrapper">
+          <img src="App_Development.png" alt="App Development" class="card-img" />
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">تطوير التطبيقات</h3>
+          <p class="card-desc">ابنِ تطبيقات موبايل لـ iOS وAndroid باستخدام Flutter وReact Native.</p>
+          <ul class="card-list">
+            <li>✅ 50 درس</li>
+            <li>✅ 4 تطبيقات كاملة</li>
+            <li>✅ شهادة معتمدة</li>
+          </ul>
+          <a href="#" class="btn-card">ابدأ الكورس</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== FEATURES SECTION ===== -->
+  <section id="features">
+    <div class="section-header">
+      <span class="section-eyebrow">ليه TechLearn؟</span>
+      <h2 class="section-title">مميزاتنا</h2>
+    </div>
+    <div class="features-grid">
+      <div class="feature-item reveal">
+        <span class="feature-icon">🎯</span>
+        <h4>محتوى موجّه</h4>
+        <p>كل درس مصمم بهدف واضح ومحدد</p>
+      </div>
+      <div class="feature-item reveal">
+        <span class="feature-icon">🌍</span>
+        <h4>بالعربي 100%</h4>
+        <p>شروحات بلغتك ومصطلحات مفسرة</p>
+      </div>
+      <div class="feature-item reveal">
+        <span class="feature-icon">💡</span>
+        <h4>تعلم بالممارسة</h4>
+        <p>مشاريع حقيقية بعد كل وحدة</p>
+      </div>
+      <div class="feature-item reveal">
+        <span class="feature-icon">🏆</span>
+        <h4>شهادات معتمدة</h4>
+        <p>شهادة إتمام لكل كورس تكمله</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section id="contact">
+    <div class="contact-inner reveal">
+      <h2 class="contact-title">عندك سؤال؟</h2>
+      <p class="contact-sub">فريقنا جاهز يساعدك في أي وقت</p>
+      <div class="contact-form-box">
+        <div class="form-group">
+          <label for="c-name" class="form-label">اسمك</label>
+          <input type="text" id="c-name" class="form-input" placeholder="اكتب اسمك" />
+        </div>
+        <div class="form-group">
+          <label for="c-email" class="form-label">إيميلك</label>
+          <input type="email" id="c-email" class="form-input" placeholder="example@mail.com" />
+        </div>
+        <div class="form-group">
+          <label for="c-msg" class="form-label">رسالتك</label>
+          <textarea id="c-msg" class="form-input form-textarea" rows="4" placeholder="اكتب سؤالك هنا..."></textarea>
+        </div>
+        <button id="send-btn" class="btn-primary btn-full">إرسال الرسالة ✉️</button>
+        <p id="form-success" class="form-success hidden">✅ تم الإرسال! هرد عليك قريباً.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="main-footer">
+    <p>© 2025 TechLearn — صُنع بـ ❤️ لكل من يريد تعلم التقنية | Sprix HTML + CSS Level 1 · Module 3</p>
+  </footer>
+
+  <script>
+    // Intersection Observer for card animations
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          // stagger delay based on position among siblings
+          const siblings = [...entry.target.parentElement.querySelectorAll('.reveal')];
+          const idx = siblings.indexOf(entry.target);
+          entry.target.style.transitionDelay = (idx * 0.12) + 's';
+          entry.target.classList.add('revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    revealEls.forEach(el => observer.observe(el));
+
+    // Form submit
+    document.getElementById('send-btn').addEventListener('click', function () {
+      const n = document.getElementById('c-name').value.trim();
+      const e = document.getElementById('c-email').value.trim();
+      const m = document.getElementById('c-msg').value.trim();
+      const s = document.getElementById('form-success');
+      if (n && e && m) {
+        s.classList.remove('hidden');
+        this.textContent = '✅ تم الإرسال!';
+        this.disabled = true;
+      } else {
+        alert('من فضلك ملّي كل الحقول!');
+      }
+    });
+  </script>
+
+</body>
+</html>
